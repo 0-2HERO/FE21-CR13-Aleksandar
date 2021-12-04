@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+   <div class="container w-50" id="editform">
+    <h2 class="mt-5"> Edit Event </h2>
+    {{form_start(form)}}
+
+    {{form_widget(form)}}
+
+    {{form_end(form)}}
+    <a href="/allevents/" class="btn btn-primary">Go back</a>
+    </div>
+
+    
+
+{% endblock %}

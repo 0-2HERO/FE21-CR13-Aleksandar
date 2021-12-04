@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{#  hero #}
+<div class="jumbotron p-3 p-md-5 text-white rounded" id="jumbo">
+        <div class="col-md-6 px-0 mt-5">
+        {# needs to be fixed #}
+        <br>       <br>        <br>        <br>        <br>        <br>        <br>        <br> 
+          <h1 class="display-4 font-italic" id="first">Welcome to Vienna</h1>
+          <p class="lead my-3" id="second">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p>
+          <p class="lead mb-0" id="third"><a href="#" class="text-white font-weight-bold">Contact us...</a></p>
+        </div>
+      </div>
+      {#  hero #}
+
+      <div class="container mb-5">
+        <h1>Events in Vienna</h1>
+       </div>
+
+      <div class="row justify-content-around ">
+    {% for event in events %}
+     <div class="card m-3 border-0" style="max-width: 640px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{{event.image}}" style="max-width: 100%; min-height: 100%; min-width: 100%"  class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title ">Event: {{event.name}}</h5>
+        <p class="card-text">{{event.datetime|date('F j, Y, g:i a')}}</p>
+        <a href="/details/{{event.id}}" class="btn ">More details..</a>
+      </div>
+    </div>
+  </div>
+</div>
+    {% else %}
+    <div class"container-fluid d-flex justify-content-center">
+        <h1>No Events available</h1><br>
+        <p class="fw-lighter">please check again later</p>
+    <div>
+    {% endfor %}
+</div>
+
+
+
+   
+
+{% endblock %}

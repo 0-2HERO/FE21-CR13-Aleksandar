@@ -1,0 +1,25 @@
+#jumbo{
+    background-image: url(https://images.unsplash.com/photo-1587455011549-8f2334ce4f00?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80); 
+   
+  
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size:cover;
+  height: 600px;
+  margin-bottom: 5rem;
+  
+}
+#first,#second, #third{
+    text-shadow: 1px 1px #080808;
+}
+
+
+#det-div{
+    margin-top: 30rem;
+}
+   
+#editform{
+    margin-top: 10rem;
+}
+
+

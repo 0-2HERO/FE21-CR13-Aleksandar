@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+ 
+{% block body %}
+
+<div class="row mt-5" id="det-div ">
+      <div class="col-lg-8 col-md-10 mx-auto mt-5">
+        <h2 class="section-heading mb-5">Event: {{event.name}} <hr></h2>
+            <img class="img-fluid mb-3" src=" {{event.image}}" alt="Demo Image">
+                <h3 class="fw-light mt-2"> {{event.description}}</h3>
+                    <hr class="mt-5">
+            <p> Event capacity: {{event.capacity}} people</p>
+            <p> Location: {{event.location}}</p>
+            <p> Address: {{event.address}}<br>{{event.zip}}<br>{{event.city}} <hr><br>Contact: {{event.contact}}<a href="#" class="text-decoration-none"><span class="ms-5">{{event.url}}<span></a></p>
+            
+         </div>
+        </div>
+   
+
+
+  
+
+{% endblock %}
